@@ -1,15 +1,17 @@
 #include<iostream>
 using namespace std;
 int main()
-{   int oo;
-    int arr[5]={0,5,6,54,699};
-    cout<<"enter what you want"<<endl;
-    cin>>oo;
-    for(int i=0;i<5;i++)
+{   int i=0,target=9;
+    int num[4]={2,7,11,15};
+
+    for(i=0;i<4;i++)
     {
-       if(oo==arr[i]+arr[i])
+       for(int j=0;j<4;j++)
        {
-        cout<<arr[i]<<endl;
+        if(target==(num[i]+num[j]))
+        {
+            cout<<i<<j<<endl;
+        }
        }
     }
 return 0;    
