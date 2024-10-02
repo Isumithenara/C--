@@ -1,4 +1,4 @@
-//practice f member functions
+//practice  member functions
 #include<iostream>
 #include<string>
 using namespace std;
