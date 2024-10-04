@@ -17,8 +17,8 @@ int main()
     size_t position=alphabet.find(c);
     if(position != string::npos)
     {
-      char new_c=  key.at(position);
-      encrypted_msg += c;
+      char new_c=key.at(position);
+      encrypted_msg += new_c;
     }
     else
     {
@@ -26,6 +26,27 @@ int main()
     }
    
    }
-    cout<<"ur msg is "<<encrypted_msg;
+    cout<<"Your MESSAGE IS>>>:    "<<encrypted_msg;
+   
+   
+   
+    cout<<"decrypting message...."<<endl;
+    string decrypted_msg;
+    for(char c:encrypted_msg)
+   {
+    size_t position=key.find(c);
+    if(position != string::npos)
+    {
+      char new_c=alphabet.at(position);
+      decrypted_msg += new_c;
+    }
+    else
+    {
+        decrypted_msg += c;
+    }
+   
+   }
+   cout<<endl<<"your decrypted message is::"<<decrypted_msg<<endl;
    return 0;
+   
 }
